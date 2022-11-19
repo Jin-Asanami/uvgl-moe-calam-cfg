@@ -1,4 +1,4 @@
-# uvgl-calam-cfg
-Calamares' config files for UVGL
+# uvgl-moe-calam-cfg
+Calamares' config files for MVGL
 
-UVGL向けCalamares設定ファイル
+MVGL向けCalamares設定ファイル
