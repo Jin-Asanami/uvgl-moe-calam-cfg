@@ -121,13 +121,13 @@ navigation: widget
 # are visible as buttons there if the corresponding *show* keys
 # are set to "true" (they can also be overridden).
 strings:
-    productName:         "Univalent GNU/Linux"
+    productName:         "Moevalent GNU/Linux"
     shortProductName:    UVGL
     version:             Rolling
     #shortVersion:        
-    versionedName:       Univalent GNU/Linux
+    versionedName:       Moevalent GNU/Linux
     shortVersionedName:  UVGL
-    bootloaderEntryName: Univalent
+    bootloaderEntryName: Moevalent
     #productUrl:          https://calamares.io/
     #supportUrl:          https://github.com/calamares/calamares/wiki
     #knownIssuesUrl:      https://github.com/calamares/calamares/issues
