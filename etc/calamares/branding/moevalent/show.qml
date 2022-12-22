@@ -1,11 +1,3 @@
-/* === This file is part of Calamares - <https://calamares.io> ===
- *
- *   SPDX-License-Identifier: GPL-3.0-or-later
- *
- *   Calamares is Free Software: see the License-Identifier above.
- *
- */
-
 import QtQuick 2.0;
 import calamares.slideshow 1.0;
 
@@ -13,50 +5,90 @@ Presentation
 {
     id: presentation
 
-    function nextSlide() {
-        console.log("QML Component (default slideshow) Next slide");
-        presentation.goToNextSlide();
-    }
-
     Timer {
-        id: advanceTimer
         interval: 10000
-        running: presentation.activatedInCalamares
+        running: true
         repeat: true
-        onTriggered: nextSlide()
+        onTriggered: presentation.goToNextSlide()
     }
-
-
-    Slide
-    {
-        anchors.fill: parent
-        anchors.verticalCenterOffset: 0
-
-        Image
-        {
-            id: background1
-            source: "slide1.png"
-            width: parent.width; height: parent.height
-            horizontalAlignment: Image.AlignCenter
-            verticalAlignment: Image.AlignTop
-            fillMode: Image.Stretch
-            anchors.fill: parent
+    Slide {
+        Image {
+            anchors.centerIn: parent
+            id: image2
+            x: 0
+            y: 0
+            width: 810
+            height: 485
+            fillMode: Image.PreserveAspectFit
+            smooth: true
+            source: "NewLook.png"
         }
     }
-
-    // When this slideshow is loaded as a V1 slideshow, only
-    // activatedInCalamares is set, which starts the timer (see above).
-    //
-    // In V2, also the onActivate() and onLeave() methods are called.
-    // These example functions log a message (and re-start the slides
-    // from the first).
-    function onActivate() {
-        console.log("QML Component (default slideshow) activated");
-        presentation.currentSlide = 0;
+    Slide {
+        Image {
+            anchors.centerIn: parent
+            id: image3
+            x: 0
+            y: 0
+            width: 810
+            height: 485
+            fillMode: Image.PreserveAspectFit
+            smooth: true
+            source: "Accessories.png"
+        }
     }
+    Slide {
+        Image {
+            anchors.centerIn: parent
+            id: image6
+            x: 0
+            y: 0
+            width: 810
+            height: 485
+            fillMode: Image.PreserveAspectFit
+            smooth: true
+            source: "Chromium.png"
+        }
 
-    function onLeave() {
-        console.log("QML Component (default slideshow) deactivated");
+    }
+    Slide {
+        Image {
+            anchors.centerIn: parent
+            id: image7
+            x: 0
+            y: 0
+            width: 810
+            height: 485
+            fillMode: Image.PreserveAspectFit
+            smooth: true
+            source: "Office.png"
+        }
+    }
+    Slide {
+        Image {
+            anchors.centerIn: parent
+            id: image5
+            x: 0
+            y: 0
+            width: 810
+            height: 485
+            fillMode: Image.PreserveAspectFit
+            smooth: true
+            source: "Media.png"
+        }
+    }
+    Slide {
+        Image {
+            anchors.centerIn: parent
+            id: image4
+            x: 0
+            y: 0
+            width: 810
+            height: 485
+            fillMode: Image.PreserveAspectFit
+            smooth: true
+            source: "TweakIt.png"
+        }
     }
 
 }
